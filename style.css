@@ -1,6 +1,9 @@
 body {
-    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    /* height: 100vh; */
     margin: 0;
+    padding: 0;
+    /* width: 100%; */
 }
 .top_page {
     display: flex;
@@ -18,7 +21,7 @@ body {
 .hero_left {
     display: flex;
     flex-flow: column wrap;
-    gap:10px;
+    gap: 12px;
     max-width: 500px;
     /* margin: auto; */
 }
@@ -26,16 +29,21 @@ body {
     /* margin: auto; */
     /* max-width: 600px; */
     img {
-        max-width: 300px;
+        width: 300px;
+    }
+    img:hover {
+        transform: scale(1.75);
+        border: 3px ridge gray;
     }
 }
+
 .hero {
     .hero_main {
         font-size: 48px;
         font-weight: bolder;
         color:#F9FAF8;
     }
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     padding:60px;
     flex:1;
     display: flex;
@@ -43,12 +51,20 @@ body {
     align-items: center;
     /* border:2px solid green;  DEBUGGING */
 }
-
+hr {
+    width: 100%;
+}
 .topright_header {
+    align-self: center;
     display: flex;
-    gap: 16px;
+    gap: 24px;
     font-size: 18px;
     color:#e5e7eb;
+    a {
+        font-size: 18px;
+        color:#e5e7eb;
+        text-decoration: none;
+    }
 }
 
 .topleft_header {
@@ -67,7 +83,131 @@ button {
     border-radius: 8px;
     border: none;
     padding:10px 25px;
+    cursor: pointer;
 }
-.button_call {
-    background-color: #3882f6;
+
+
+.bottom_page {
+    /* gap:24px; */
+    display: flex;
+    flex-direction: column;
+
+    .info {
+        display: flex;
+        flex-flow: column;
+        /* justify-content: center; */
+        align-items: center;
+        
+        .info_title {
+            margin-top: 24px;
+            color:rgb(40, 82, 122);
+        }
+       
+        .cards {
+            gap:8px 16px;
+            justify-content:center ;
+            align-items: center;
+            align-content: center;
+            display: flex;
+            /* border: 2px solid red;  DEBUGGING   */
+            flex-flow: column wrap;
+            max-height:300px;
+            /* width: 100%; */
+            
+            
+            .card {
+                border: 2px solid rgb(99, 99, 253);
+                height: 150px;
+                width: 150px;
+                border-radius: 12px;
+                
+            }
+            .card:hover {
+                transform: scale(1.5);
+                background-color: cornflowerblue;
+                
+            }
+            .subtext {
+                color:#1f2937;
+                text-align: center;
+                max-width: 180px;
+        
+            }
+        }
+    }
+
+        .quote_section {
+            background-color: #e5e7eb;
+            padding: 36px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .quote {
+                padding: 36px;
+                width: 900px;
+                align-self: center;
+                font-size: 36px;
+                color:#1f2937;
+                text-align:start;
+                font-style:italic;
+                font-weight: 100;
+            }
+
+            .signature {
+                font-weight: 600;
+                color:#1f2937;
+                margin: 0;
+                width: 900px;
+                align-self: center;
+                /* border:2px solid blue; */
+                text-align: end;
+            }       
+        }
+
+    .call_action_section {
+        /* width: 100%; */
+        margin:auto;
+        padding: 100px;
+        
+        .call_action {
+
+            /* border:2px solid blue; */
+            padding: 36px 112px;
+            display: flex;
+            align-items: center; 
+            border-radius: 24px; 
+            background-color: #3882f6;
+            
+            .left_action {
+                flex:2;
+            }
+
+            .sign_up {
+                text-align: end;
+                flex:1;
+
+                .button_call {
+                    border:1px solid #fff;
+                }
+            }
+
+        }
+        
+
+    }
+
 }
+
+    .footer {
+        position: fixed;
+        padding: 24px;
+        text-align: center;
+        background-color: #1f2937;
+        bottom:0;
+        width: 100%;
+        /* height: 40px; */
+    }
+       
+    
+
